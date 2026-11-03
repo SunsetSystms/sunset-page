@@ -1,4 +1,4 @@
-const projectEmail = "sunsetttech@gmail.com";
+const projectEmail = "dfreitas.developer@gmail.com";
 const projectEmailSubject = "Quero iniciar um projeto digital";
 const projectEmailBody = `Olá!
 Gostaria de conversar sobre um projeto para minha empresa.
