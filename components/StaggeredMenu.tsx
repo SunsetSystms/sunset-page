@@ -27,6 +27,7 @@ export interface StaggeredMenuProps {
   isFixed: boolean;
   changeMenuColorOnOpen?: boolean;
   closeOnClickAway?: boolean;
+  isScrolled?: boolean;
   onMenuOpen?: () => void;
   onMenuClose?: () => void;
 }
@@ -46,6 +47,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   accentColor = "#5227FF",
   isFixed = false,
   closeOnClickAway = true,
+  isScrolled = false,
   onMenuOpen,
   onMenuClose,
 }: StaggeredMenuProps) => {
@@ -495,7 +497,18 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         />
 
         <header
-          className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between p-[2em] bg-[#141414]/95 border-b border-white/10 shadow-lg shadow-black/10 backdrop-blur-md pointer-events-none z-20"
+          className={`staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between p-[2em] transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 ${
+            isScrolled
+              ? "border-b border-white/10 bg-[#141414]/95 shadow-lg shadow-black/10"
+              : "border-b border-transparent bg-transparent shadow-none"
+          } pointer-events-none z-20`}
+          style={{
+            backgroundColor: isScrolled ? "rgb(20 20 20 / 95%)" : "transparent",
+            borderBottomColor: isScrolled ? "rgb(255 255 255 / 10%)" : "transparent",
+            boxShadow: isScrolled ? "0 10px 15px -3px rgb(0 0 0 / 10%)" : "none",
+            backdropFilter: isScrolled ? "blur(12px)" : "none",
+            WebkitBackdropFilter: isScrolled ? "blur(12px)" : "none",
+          }}
           aria-label="Main navigation header"
         >
           <div

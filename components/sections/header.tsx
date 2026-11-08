@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
+import { useEffect, useState } from "react";
 import StaggeredMenu from "@/components/StaggeredMenu";
 import { projectWhatsAppLink } from "@/lib/contact";
 
@@ -13,9 +14,30 @@ const links = [
 ];
 
 export function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 24);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 hidden border-b border-white/10 bg-[#141414]/95 text-white shadow-lg shadow-black/10 backdrop-blur-md lg:block">
+      <header
+        className={`fixed inset-x-0 top-0 z-50 hidden border-b text-white transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 lg:block ${
+          isScrolled
+            ? "border-white/10 bg-[#141414]/95 shadow-lg shadow-black/10 backdrop-blur-md"
+            : "border-transparent bg-transparent shadow-none backdrop-blur-0"
+        }`}
+      >
         <div className="mx-auto max-w-[1600px] flex h-20 w-full items-center justify-between gap-8 px-5 sm:px-8 lg:px-12">
           <a href="#inicio" className="group flex items-center gap-3 text-sm font-semibold tracking-tight">
             {/* <img
@@ -71,6 +93,7 @@ export function Header() {
           colors={["#ff6b4a", "#171719"]}
           logoUrl="/logo.png"
           accentColor="#ff6b4a"
+          isScrolled={isScrolled}
         />
       </div>
     </>
