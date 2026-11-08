@@ -1,6 +1,6 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { AtSign, Globe, Menu, X } from "lucide-react";
+import { ArrowUpRight, AtSign, Globe, Menu, MessageCircle, X } from "lucide-react";
 import { projectWhatsAppLink } from "@/lib/contact";
 
 export interface StaggeredMenuItem {
@@ -608,8 +608,9 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                   href={projectWhatsAppLink}
                   onClick={closeMenu}
                 >
+                  <MessageCircle size={16} strokeWidth={2} aria-hidden="true" />
                   Começar Projeto
-                  <span aria-hidden="true">↗</span>
+                  <ArrowUpRight size={16} strokeWidth={2} aria-hidden="true" />
                 </a>
               </div>
 
@@ -703,7 +704,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 .sm-scope .sm-panel-list[data-numbering] { counter-reset: smItem; }
 .sm-scope .sm-panel-list[data-numbering] .sm-panel-item::after { counter-increment: smItem; content: counter(smItem, decimal-leading-zero); position: absolute; top: 0.1em; right: 3.2em; font-size: 18px; font-weight: 400; color: var(--sm-accent, #ff0000); letter-spacing: 0; pointer-events: none; user-select: none; opacity: var(--sm-num-opacity, 0); }
 @media (max-width: 1024px) { .sm-scope .staggered-menu-header { padding: 1.25rem 1.5rem; } .sm-scope .staggered-menu-panel { width: min(88vw, 420px); padding: 6.5rem 1.5rem 1.5rem; } .sm-scope .sm-panel-item { font-size: clamp(2rem, 8vw, 2.8rem); letter-spacing: -1px; } .sm-scope .sm-panel-list[data-numbering] .sm-panel-item { display: flex; align-items: flex-start; padding-right: 0; } .sm-scope .sm-panel-list[data-numbering] .sm-panel-item::after { position: static; margin-left: 0.75rem; padding-top: 0.15em; font-size: 0.65rem; line-height: 1; } }
-@media (max-width: 640px) { .sm-scope .staggered-menu-header { top: 0; left: 0; width: 100vw; padding: 24px; border-bottom: 1px solid rgba(255, 255, 255, 0.12); background: rgba(20, 20, 20, 0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 999; } .sm-scope .sm-panel-inner { gap: 0.5rem; min-height: 0; } .sm-scope .staggered-menu-panel, .sm-scope .sm-prelayers { width: 100vw; } .sm-scope .staggered-menu-panel { right: 0; border-radius: 0; padding: 5.5rem 1.25rem 1.25rem; } .sm-scope  .sm-scope .sm-panel-itemWrap { padding-bottom: 0.75rem; } .sm-scope .sm-panel-item { font-size: clamp(1.35rem, 8vw, 1.9rem); } .sm-scope .sm-panel-footer { flex-shrink: 0; } .sm-scope .sm-contact-block { padding-top: 0.9rem; } .sm-scope .sm-contact-copy { margin-bottom: 0.75rem; } .sm-scope .sm-contact-link { min-height: 2.25rem; padding-block: 0.5rem; } .sm-scope .sm-socials { padding-top: 0.65rem; } .sm-scope .sm-socials-link { font-size: 0.7rem; } }
+@media (max-width: 640px) { .sm-scope .staggered-menu-header { top: 0; left: 0; width: 100vw; padding: 24px; border-bottom: 0; background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; z-index: 999; } .sm-scope .sm-panel-inner { gap: 0.5rem; min-height: 0; } .sm-scope .staggered-menu-panel, .sm-scope .sm-prelayers { width: 100vw; } .sm-scope .staggered-menu-panel { right: 0; border-radius: 0; padding: 5.5rem 1.25rem 1.25rem; } .sm-scope  .sm-scope .sm-panel-itemWrap { padding-bottom: 0.75rem; } .sm-scope .sm-panel-item { font-size: clamp(1.35rem, 8vw, 1.9rem); } .sm-scope .sm-panel-footer { flex-shrink: 0; } .sm-scope .sm-contact-block { padding-top: 0.9rem; } .sm-scope .sm-contact-copy { margin-bottom: 0.75rem; } .sm-scope .sm-contact-link { min-height: 2.25rem; padding-block: 0.5rem; } .sm-scope .sm-socials { padding-top: 0.65rem; } .sm-scope .sm-socials-link { font-size: 0.7rem; } }
       `}</style>
     </div>
   );
