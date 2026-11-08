@@ -9,16 +9,17 @@ import Threads from "@/components/ui/Threads";
 import { MessageCircle } from "lucide-react";
 import Faq from "@/components/sections/faq";
 import { projectWhatsAppLink } from "@/lib/contact";
+import BackToTop from "@/components/ui/BackToTop";
 
 export default function Home() {
   return (
     <main>
-      {/* <Header /> */}
+      <Header />
       <Hero />
 
       <Services />
 
-      <div id="processo">
+      <div id="processo" className="scroll-mt-6">
         <Steps />
       </div>
       <Depoiments />
@@ -26,7 +27,7 @@ export default function Home() {
 
       <section
         id="contato"
-        className="cta-section px-4  md:px-10 2xl:px-30 text-center flex justify-center items-center  "
+        className="scroll-mt-6 cta-section px-4  md:px-10 2xl:px-30 text-center flex justify-center items-center  "
       >
         <div className="relative overflow-hidden py-28 w-full flex justify-center items-center ">
           <div className="cta-grid" />
@@ -51,6 +52,16 @@ export default function Home() {
           <Threads amplitude={3} distance={2} enableMouseInteraction={false} />
         </div> */}
       </section>
+      <footer className="flex flex-col items-center justify-between gap-3 border-t border-black/10 bg-white px-6 py-6 text-xs text-gray-500 sm:flex-row sm:px-10">
+        <span>© {new Date().getFullYear()} Sunset. Todos os direitos reservados.</span>
+        <a
+          href={projectWhatsAppLink}
+          className="font-medium text-primary-color transition-colors hover:text-accent-color"
+        >
+          Fale conosco
+        </a>
+      </footer>
+      <BackToTop />
     </main>
   );
 }

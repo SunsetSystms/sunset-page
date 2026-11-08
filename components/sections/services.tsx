@@ -1,4 +1,10 @@
-import { Code2, Monitor, ShoppingCart, Smartphone } from "lucide-react";
+import {
+  ArrowUpRight,
+  Code2,
+  Monitor,
+  ShoppingCart,
+  Smartphone,
+} from "lucide-react";
 import LogoLoop from "../ui/LogoLoop";
 import ShinyText from "../ui/shiny-text";
 import SpotlightCard from "../ui/SpotlightCard";
@@ -121,7 +127,7 @@ export default function Services() {
   return (
     <section
       className=" bg-primary-color items-center justify-center relative w-full flex flex-col px-2 py-20 md:py-30 md:px-10"
-      id="grid"
+      id="servicos"
     >
       
       <div className="flex flex-col  md:gap-20 2xl:px-10 max-w-[1700px] w-full mx-auto">
@@ -205,7 +211,7 @@ export default function Services() {
                         <span className="text-sm font-medium text-black shrink-0">
                           Começar meu projeto
                         </span>
-                        <span aria-hidden="true">↗</span>
+                        <ArrowUpRight size={16} strokeWidth={1.8} aria-hidden="true" />
                       </a>
                     </div>
                   </div>

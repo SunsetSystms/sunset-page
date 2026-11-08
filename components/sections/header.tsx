@@ -5,7 +5,7 @@ import StaggeredMenu from "@/components/StaggeredMenu";
 import { projectWhatsAppLink } from "@/lib/contact";
 
 const links = [
-  { label: "Início", ariaLabel: "Ir para o início", link: "#grid" },
+  { label: "Início", ariaLabel: "Ir para o início", link: "#inicio" },
   { label: "Serviços", ariaLabel: "Conhecer soluções", link: "#servicos" },
   { label: "Etapas", ariaLabel: "Conhecer nosso processo", link: "#processo" },
   { label: "Dúvidas", ariaLabel: "Ver dúvidas frequentes", link: "#faq" },
@@ -15,9 +15,9 @@ const links = [
 export function Header() {
   return (
     <>
-      <header className="absolute inset-x-0 top-0 z-50  hidden border-b border-black/8  text-[#171719]  backdrop-blur-xl lg:block">
+      <header className="absolute inset-x-0 top-0 z-50 hidden border-b border-white/10 text-white backdrop-blur-xl lg:block">
         <div className="mx-auto max-w-[1600px] flex h-20 w-full items-center justify-between gap-8 px-5 sm:px-8 lg:px-12">
-          <a href="#grid" className="group flex items-center gap-3 text-sm font-semibold tracking-tight">
+          <a href="#inicio" className="group flex items-center gap-3 text-sm font-semibold tracking-tight">
             {/* <img
               src="/logo.png"
               alt=""
@@ -35,7 +35,7 @@ export function Header() {
               <a
                 key={link.link}
                 href={link.link}
-                className="group flex items-center gap-2 whitespace-nowrap text-[10px] font-semibold uppercase tracking-[0.12em] text-[#171719]/55 transition-colors hover:text-[#171719]"
+                className="group flex items-center gap-2 whitespace-nowrap text-[10px] font-semibold uppercase tracking-[0.12em] text-white/70 transition-colors hover:text-white"
               >
                 <span className="text-[9px] text-[#ff6b4a]/80">0{index + 1}</span>
                 {link.label}
@@ -44,8 +44,11 @@ export function Header() {
             ))}
           </nav>
 
-          <a href={projectWhatsAppLink} className="text-xs  bg-primary-color  text-white font-semibold py-3 px-4 rounded-full transition-colors duration-300 flex items-center gap-2 justify-center cursor-pointer hover:shadow-2xl">
-            Comece seu projeto
+          <a
+            href={projectWhatsAppLink}
+            className="flex items-center justify-center gap-2 rounded-full bg-white px-4 py-3 text-xs font-semibold text-black transition-colors duration-300 hover:bg-white/90 hover:shadow-2xl"
+          >
+            Começar meu projeto
             <ArrowUpRight size={16} strokeWidth={1.8} aria-hidden="true" />
           </a>
         </div>
@@ -62,7 +65,7 @@ export function Header() {
           displaySocials
           displayItemNumbering
           isFixed={true}
-          menuButtonColor="#171719"
+          menuButtonColor="#ffffff"
           openMenuButtonColor="#ffffff"
           changeMenuColorOnOpen
           colors={["#ff6b4a", "#171719"]}
