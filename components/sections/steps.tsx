@@ -29,14 +29,14 @@ export default function Steps() {
 
   return (
     <section className="flex flex-col   w-full gap-4 py-20 md:py-40 px-2 md:px-10 2xl:px-20 max-w-[1700px] mx-auto">
-      <div className="flex items-center flex-col  justify-center md:justify-start md:items-start  ">
+      <div className="flex flex-col items-center justify-center text-center">
        
     
-        <p className="uppercase tracking-widest  ml-2 text-xs mb-4 mt-6  text-center  w-full md:text-start">
+        <p className="mb-4 mt-6 w-full text-center text-xs uppercase tracking-widest">
           <span className="text-[#ff6b4a]">{"{"}</span>{" NOSSO PROCESSO "}<span className="text-[#ff6b4a]">{"}"}</span>
         </p>
-        <div className="flex  items-center w-full gap-6 justify-center md:justify-start">
-          <h2 className="text-3xl md:max-w-full md:text-4xl font-medium text-center ">
+        <div className="flex w-full items-center justify-center gap-6">
+          <h2 className="text-center text-3xl font-medium md:text-4xl">
             <ShinyText
               text="Como seu projeto acontece"
               speed={6}
@@ -50,10 +50,9 @@ export default function Steps() {
               disabled={false}
             />
           </h2>
-          <hr className="flex-1 border-gray-200 hidden md:block" />
         </div>
 
-        <p className="max-w-xl  px-2  text-center md:text-start text-sm mt-4 md:text-base   text-gray-500 ">
+        <p className="mx-auto mt-4 max-w-xl px-2 text-center text-sm text-gray-500 md:text-base">
           Planejamos, desenvolvemos e entregamos soluções digitais sob medida,
           do primeiro conceito ao produto final. .
         </p>

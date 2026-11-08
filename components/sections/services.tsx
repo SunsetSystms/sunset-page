@@ -126,19 +126,19 @@ export default function Services() {
 
   return (
     <section
-      className=" bg-primary-color items-center justify-center relative w-full flex flex-col px-2 py-20 md:py-30 md:px-10"
+      className="relative flex w-full flex-col items-center justify-center bg-[#141414] bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px] px-2 py-16 md:px-10 md:py-24"
       id="servicos"
     >
       
-      <div className="flex flex-col  md:gap-20 2xl:px-10 max-w-[1700px] w-full mx-auto">
+      <div className="mx-auto flex w-full max-w-[1700px] flex-col md:gap-12 2xl:px-10">
         <div className="flex  flex-col gap-4 ">
-          <p className="uppercase tracking-widest 2 ml-2 text-xs text-center md:text-start text-white">
+          <p className="text-center text-xs uppercase tracking-widest text-white">
             <span className="text-[#ff6b4a]">{"{"}</span>
             {" Soluções digitais "}
             <span className="text-[#ff6b4a]">{"}"}</span>
           </p>
-          <div className="flex justify-center md:justify-start items-center gap-10">
-            <h2 className="text-center text-2xl font-medium md:text-start lg:text-4xl lg:leading-14  ">
+          <div className="flex items-center justify-center gap-10">
+            <h2 className="text-center text-2xl font-medium lg:text-4xl lg:leading-14">
               <ShinyText
                 text="Tecnologias e Soluções"
                 speed={2}
@@ -154,13 +154,14 @@ export default function Services() {
             </h2>
            
           </div>
-          <p className="max-w-xl px-5 text-center md:text-start -ml-2 text-gray-300 text-sm md:text-base  ">
+          <p className="mx-auto max-w-xl px-5 text-center text-sm text-gray-300 md:text-base">
             Desenvolvemos soluções digitais sob medida que unem tecnologia e
             inovação para transformar ideias em resultados reais.
           </p>
         </div>
         <div className="px-4">
           <Swipper
+            className="text-white"
             loop={false}
             direction="horizontal"
             pagination
@@ -220,8 +221,8 @@ export default function Services() {
             ))}
           </Swipper>
         </div>
-        <div className="mt-15 flex w-full flex-col gap-6 md:flex-row md:items-center 2xl:px-10">
-          <p className="shrink-0 uppercase tracking-widest ml-2 text-xs text-center md:text-start text-white">
+        <div className="mt-10 flex w-full flex-col items-center gap-4 text-center md:flex-row md:justify-center md:gap-6 2xl:px-10">
+          <p className="shrink-0 text-center text-xs uppercase tracking-widest text-white">
             <span className="text-[#ff6b4a]">{"{"}</span>
             {" Tecnologias utilizadas "}
             <span className="text-[#ff6b4a]">{"}"}</span>

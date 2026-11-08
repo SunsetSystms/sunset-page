@@ -1,10 +1,10 @@
 "use client";
 
-import { Depoiments } from "@/components/sections/depoiments";
 import { Header } from "@/components/sections/header";
 import { Hero } from "@/components/sections/hero";
 import Services from "@/components/sections/services";
 import Steps from "@/components/sections/steps";
+import { Depoiments } from "@/components/sections/depoiments";
 import Threads from "@/components/ui/Threads";
 import { MessageCircle } from "lucide-react";
 import Faq from "@/components/sections/faq";
