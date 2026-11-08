@@ -15,7 +15,7 @@ const links = [
 export function Header() {
   return (
     <>
-      <header className="absolute inset-x-0 top-0 z-50 hidden border-b border-white/10 text-white backdrop-blur-xl lg:block">
+      <header className="fixed inset-x-0 top-0 z-50 hidden border-b border-white/10 bg-[#141414]/95 text-white shadow-lg shadow-black/10 backdrop-blur-md lg:block">
         <div className="mx-auto max-w-[1600px] flex h-20 w-full items-center justify-between gap-8 px-5 sm:px-8 lg:px-12">
           <a href="#inicio" className="group flex items-center gap-3 text-sm font-semibold tracking-tight">
             {/* <img
