@@ -515,17 +515,14 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
             className="sm-logo flex items-center select-none pointer-events-auto"
             aria-label="Logo"
           >
-            {/* <img
-              src={logoUrl || '/src/assets/logos/reactbits-gh-white.svg'}
+            <img
+              src={logoUrl || "/logo.png"}
               alt="Logo"
-              className=" w-4 2xl:w-30"
+              className="h-4 w-auto object-contain"
               draggable={false}
-              width={110}
-              height={24}
-            /> */}
-            <span className="sm-logo-wordmark text-sm capitalize tracking-widest ml-2">
-              sunset<span className="text-[#ff6b4a]">.</span>
-            </span>
+              width={1385}
+              height={313}
+            />
           </div>
 
           <button

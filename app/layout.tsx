@@ -52,7 +52,9 @@ export const metadata: Metadata = {
       "Sites e sistemas sob medida para empresas que querem crescer no digital.",
   },
   icons: {
-    icon: "/sunset-logo.svg",
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
   },
 };
 

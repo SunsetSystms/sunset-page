@@ -40,16 +40,13 @@ export function Header() {
       >
         <div className="mx-auto max-w-[1600px] flex h-20 w-full items-center justify-between gap-8 px-5 sm:px-8 lg:px-12">
           <a href="#inicio" className="group flex items-center gap-3 text-sm font-semibold tracking-tight">
-            {/* <img
+            <img
               src="/logo.png"
-              alt=""
-              className="h-8 w-8 object-contain transition-transform duration-300 group-hover:rotate-12"
-              width={32}
-              height={32}
-            /> */}
-            <span className="text-sm capitalize tracking-widest">
-              sunset<span className="text-[#ff6b4a]"> .</span>
-            </span>
+              alt="Sunset"
+              className="h-6 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              width={1385}
+              height={313}
+            />
           </a>
 
           <nav className="flex items-center gap-6 font-sans" aria-label="Navegação principal">
