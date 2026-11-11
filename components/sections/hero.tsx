@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import { useRef, type MouseEvent } from "react";
 import { projectWhatsAppLink } from "@/lib/contact";
 import LightRays from "../ui/LightRays";
+import Reveal from "../ui/reveal";
 
 export function Hero() {
   const gridRef = useRef<HTMLElement>(null);
@@ -38,19 +39,25 @@ export function Hero() {
       />
 
       <div className="relative text-white z-10 flex w-full max-w-4xl flex-col gap-6 text-center items-center md:gap-12 px-4">
-        <p className="text-[10px] uppercase tracking-[0.24em] sm:text-xs sm:tracking-widest">
-          <span className="text-[#ff6b4a]">{"{"}</span>
-          {" DIGITAL INNOVATION "}
-          <span className="text-[#ff6b4a]">{"}"}</span>
-        </p>
-        <h1 className="md:max-w-4xl   uppercase leading-10 text-3xl  md:text-5xl md:leading-16">
-          Sua empresa merece uma presença digital à altura.
-        </h1>
+        <Reveal>
+          <p className="text-[10px] uppercase tracking-[0.24em] sm:text-xs sm:tracking-widest">
+            <span className="text-[#ff6b4a]">{"{"}</span>
+            {" DIGITAL INNOVATION "}
+            <span className="text-[#ff6b4a]">{"}"}</span>
+          </p>
+        </Reveal>
+        <Reveal delay={0.1}>
+          <h1 className="md:max-w-4xl uppercase leading-10 text-3xl md:text-5xl md:leading-16">
+            Sua empresa merece uma presença digital à altura.
+          </h1>
+        </Reveal>
 
-        <p className="text-center max-w-2xl px-2 text-sm leading-6 text-gray-400 sm:px-6 sm:text-base sm:leading-7">
-          Sistemas sob medida para empresas que precisam vender
-          melhor,automatizar processos ou lançar uma nova operação digital
-        </p>
+        <Reveal delay={0.2}>
+          <p className="text-center max-w-2xl px-2 text-sm leading-6 text-gray-400 sm:px-6 sm:text-base sm:leading-7">
+            Sistemas sob medida para empresas que precisam vender melhor,
+            automatizar processos ou lançar uma nova operação digital
+          </p>
+        </Reveal>
         <div className="flex-col mt-2 flex w-full items-center justify-center text-sm sm:mt-4 gap-4 md:flex-row md:gap-10">
           <a
             href={projectWhatsAppLink}

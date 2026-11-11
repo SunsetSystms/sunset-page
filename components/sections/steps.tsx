@@ -2,6 +2,7 @@ import { SwiperSlide } from "swiper/react";
 import { Check, MessageCircle, PanelsTopLeft, Rocket } from "lucide-react";
 import ShinyText from "../ui/shiny-text";
 import Swipper from "../ui/swipper";
+import Reveal from "../ui/reveal";
 
 export default function Steps() {
   const steps = [
@@ -29,7 +30,7 @@ export default function Steps() {
 
   return (
     <section className="flex flex-col   w-full gap-4 py-20 md:py-40 px-2 md:px-10 2xl:px-20 max-w-[1700px] mx-auto">
-      <div className="flex flex-col items-center justify-center text-center">
+      <Reveal className="flex flex-col items-center justify-center text-center">
        
     
         <p className="mb-4 mt-6 w-full text-center text-xs uppercase tracking-widest">
@@ -51,12 +52,11 @@ export default function Steps() {
             />
           </h2>
         </div>
-
         <p className="mx-auto mt-4 max-w-xl px-2 text-center text-sm text-gray-500 md:text-base">
           Planejamos, desenvolvemos e entregamos soluções digitais sob medida,
           do primeiro conceito ao produto final. .
         </p>
-      </div>
+      </Reveal>
 
       <div className="max-w-7xl lg:mt-10   2xl:mx-auto  rounded-2xl ">
         <Swipper

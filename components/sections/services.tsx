@@ -12,6 +12,7 @@ import Swipper from "../ui/swipper";
 import { SwiperSlide } from "swiper/react";
 import TextType from "../ui/TextType";
 import { projectWhatsAppLink } from "@/lib/contact";
+import Reveal from "../ui/reveal";
 
 export default function Services() {
   const tecnologias = [
@@ -131,7 +132,7 @@ export default function Services() {
     >
       
       <div className="mx-auto flex w-full max-w-[1700px] flex-col md:gap-12 2xl:px-10">
-        <div className="flex  flex-col gap-4 ">
+        <Reveal className="flex flex-col gap-4">
           <p className="text-center text-xs uppercase tracking-widest text-white">
             <span className="text-[#ff6b4a]">{"{"}</span>
             {" Soluções digitais "}
@@ -158,7 +159,7 @@ export default function Services() {
             Desenvolvemos soluções digitais sob medida que unem tecnologia e
             inovação para transformar ideias em resultados reais.
           </p>
-        </div>
+        </Reveal>
         <div className="px-4">
           <Swipper
             className="text-white"

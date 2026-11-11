@@ -10,6 +10,7 @@ import { MessageCircle } from "lucide-react";
 import Faq from "@/components/sections/faq";
 import { projectWhatsAppLink } from "@/lib/contact";
 import BackToTop from "@/components/ui/BackToTop";
+import Reveal from "@/components/ui/reveal";
 
 export default function Home() {
   return (
@@ -31,7 +32,7 @@ export default function Home() {
       >
         <div className="relative overflow-hidden py-28 w-full flex justify-center items-center ">
           <div className="cta-grid" />
-          <div className="relative z-10 md:max-w-xl flex justify-center items-center flex-col gap-6">
+          <Reveal className="relative z-10 md:max-w-xl flex justify-center items-center flex-col gap-6">
             {/* <SectionLabel no="09">Próximo passo</SectionLabel> */}
             <h2 className="text-3xl md:text-4xl  md:leading-12 ">
               Pronto para levar seu negócio mais longe?
@@ -46,7 +47,7 @@ export default function Home() {
             >
               Começar meu projeto <MessageCircle size={17} />
             </a>
-          </div>
+          </Reveal>
         </div>
         {/* <div className=" absolute mt-100 inset-0 w-full">
           <Threads amplitude={3} distance={2} enableMouseInteraction={false} />

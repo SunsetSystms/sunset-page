@@ -5,6 +5,7 @@ import ShinyText from "../ui/shiny-text";
 import Swipper from "../ui/swipper";
 import { useEffect, useState } from "react";
 import { ShineBorder } from "../ui/shine-border";
+import Reveal from "../ui/reveal";
 
 export function Depoiments() {
   const [largura, setLargura] = useState(0);
@@ -43,7 +44,7 @@ export function Depoiments() {
       className={`relative overflow-hidden bg-primary-color lg:[clip-path:polygon(0_0,45%_0,60%_80px,100%_80px,100%_100%,0_100%)] text-white pt-20 md:pt-40 pb-20  flex  ${largura < 1300 ? "flex-col" : "flex-row"} justify-between mt-20 px-4 md:px-10  2xl:px-45`}
       id="grid"
     >
-      <div className="relative z-10 flex gap-6  flex-col w-full justify-center md:justify-start  lg:max-w-lg">
+      <Reveal className="relative z-10 flex gap-6 flex-col w-full justify-center md:justify-start lg:max-w-lg">
          <p className="uppercase tracking-widest  ml-2 text-center md:text-start text-xs ">
                   <span className="text-[#ff6b4a]">{"{"}</span>{" Depoimentos "}<span className="text-[#ff6b4a]">{"}"}</span>
                 </p>
@@ -76,7 +77,7 @@ export function Depoiments() {
           </span>
         </p>
         <div className="absolute bottom-40 left-50 z-10 flex gap-4 before:absolute before:inset-0 before:m-auto before:h-90 before:w-90 before:rounded-full before:bg-white/4 before:blur-3xl before:-z-10 "></div>
-      </div>
+      </Reveal>
 
       <div>
         <Swipper
